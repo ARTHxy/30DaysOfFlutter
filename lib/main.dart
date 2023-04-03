@@ -1,8 +1,18 @@
-import 'package:beginner_project/home_page.dart';
+import 'package:beginner_project/pages/home_page.dart';
+import 'package:beginner_project/pages/login_page.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
+
+  // GITHUB By Command Prompt :
+
+  /*
+   git init
+   git add .
+   git commit -m "First Commit "
+   */
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +28,19 @@ class MyApp extends StatelessWidget {
     // Final can be modified while const can't
 
     return MaterialApp(
-      home: HomePage(),
+      //  home: HomePage(), comment cz of "/"
+      themeMode: ThemeMode.light, // Can be light/dark also
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => // By Default
+            LogInPage(), // "/" means home route, use only one either "/" or homepage()
+        "/Home": (context) => HomePage(),
+        "/Login": (context) => LogInPage()
+      }, // Ways ( Raste )  (Key : Value) (String : Function)
     );
   }
 }
