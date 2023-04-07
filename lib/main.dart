@@ -1,6 +1,6 @@
 import 'package:beginner_project/pages/home_page.dart';
 import 'package:beginner_project/pages/login_page.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +16,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     // var days = 30;
@@ -30,11 +31,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //  home: HomePage(), comment cz of "/"
       themeMode: ThemeMode.light, // Can be light/dark also
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/home",
+      // initialRoute: "/Home", // For opening front page
       routes: {
         "/": (context) => // By Default
             LogInPage(), // "/" means home route, use only one either "/" or homepage()
