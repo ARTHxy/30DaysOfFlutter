@@ -1,5 +1,6 @@
 import 'package:beginner_project/pages/home_page.dart';
 import 'package:beginner_project/pages/login_page.dart';
+import 'package:beginner_project/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
@@ -42,8 +43,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => // By Default
             LogInPage(), // "/" means home route, use only one either "/" or homepage()
-        "/Home": (context) => HomePage(),
-        "/Login": (context) => LogInPage()
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LogInPage()
       }, // Ways ( Raste )  (Key : Value) (String : Function)
     );
   }
