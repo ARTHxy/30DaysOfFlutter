@@ -45,7 +45,9 @@ class MyApp extends StatelessWidget {
             LogInPage(), // "/" means home route, use only one either "/" or homepage()
         MyRoutes.homeRoute: (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LogInPage()
+        // Till 2:31:31
       }, // Ways ( Raste )  (Key : Value) (String : Function)
     );
   }
 }
+
